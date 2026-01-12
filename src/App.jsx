@@ -1,7 +1,8 @@
 import { useState } from 'react'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
-import Hero from './components/Hero'
-import ProductGrid from './components/products/ProductGrid'
+import Home from './pages/Home'
+import Shop from './pages/Shop'
 import CartDrawer from './components/cart/CartDrawer'
 import CheckoutModal from './components/checkout/CheckoutModal'
 
@@ -10,24 +11,28 @@ function App() {
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false)
 
   return (
-    <Layout onCartClick={() => setIsCartOpen(true)}>
-      <Hero />
-      <ProductGrid />
+    <Router>
+      <Layout onCartClick={() => setIsCartOpen(true)}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+        </Routes>
 
-      <CartDrawer
-        isOpen={isCartOpen}
-        onClose={() => setIsCartOpen(false)}
-        onCheckout={() => {
-          setIsCartOpen(false)
-          setIsCheckoutOpen(true)
-        }}
-      />
+        <CartDrawer
+          isOpen={isCartOpen}
+          onClose={() => setIsCartOpen(false)}
+          onCheckout={() => {
+            setIsCartOpen(false)
+            setIsCheckoutOpen(true)
+          }}
+        />
 
-      <CheckoutModal
-        isOpen={isCheckoutOpen}
-        onClose={() => setIsCheckoutOpen(false)}
-      />
-    </Layout>
+        <CheckoutModal
+          isOpen={isCheckoutOpen}
+          onClose={() => setIsCheckoutOpen(false)}
+        />
+      </Layout>
+    </Router>
   )
 }
 
