@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans antialiased;
+  }
+
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .btn-brutal {
+    @apply px-6 py-3 font-bold uppercase tracking-wider border-4 border-black bg-white text-black transition-all duration-200;
+    @apply hover:shadow-brutal-hover hover:translate-x-1 hover:translate-y-1;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  }
+
+  .btn-brutal-primary {
+    @apply btn-brutal bg-matrix border-black text-black;
+  }
+
+  .btn-brutal-secondary {
+    @apply btn-brutal bg-hotpink border-black text-white;
+  }
+
+  .card-brutal {
+    @apply border-4 border-white bg-black transition-all duration-200;
+    @apply hover:shadow-brutal hover:translate-x-1 hover:translate-y-1;
+  }
+
+  .input-brutal {
+    @apply w-full px-4 py-3 border-4 border-white bg-black text-white font-mono;
+    @apply focus:outline-none focus:border-matrix focus:shadow-brutal;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00FF41;
+  border: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF006E;
+}
+
+/* Selection color */
+::selection {
+  background: #00FF41;
+  color: #000;
+}
