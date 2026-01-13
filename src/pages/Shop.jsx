@@ -13,12 +13,12 @@ export default function Shop() {
           className="max-w-3xl mx-auto text-center mb-12"
         >
           <h1 className="text-5xl md:text-7xl font-bold font-display mb-4">
-            THE <span className="text-matrix">VOID</span> STORE
+            THE <span className="text-matrix">CREW</span> STORE
           </h1>
           <p className="text-xl text-gray-400 font-mono">
-            Browse the full collection of existential merchandise.
+            Browse the full collection of night-ready signals.
             <br />
-            <span className="text-hotpink">Warning:</span> Shopping won't fill the emptiness inside.
+            <span className="text-hotpink">Warning:</span> These pieces are designed to start things.
           </p>
         </motion.div>
       </section>
@@ -38,7 +38,7 @@ export default function Shop() {
             CAN'T FIND WHAT YOU'RE LOOKING FOR?
           </h3>
           <p className="text-gray-400 mb-6 font-mono">
-            Neither can we. Life is meaningless. But we take DM requests.
+            Tell us the night you're dressing for. We take DM requests.
           </p>
           <motion.a
             href="https://instagram.com/cokeoncock"

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sips:*)",
+      "Bash(npm install)",
+      "Bash(timeout 10 npm run dev:*)",
+      "Bash(du:*)",
+      "Bash(sort:*)",
+      "Bash(curl:*)",
+      "Bash(ls:*)",
+      "Bash(node:*)",
+      "Bash(pkill:*)",
+      "Bash(git checkout:*)"
+    ]
+  }
+}

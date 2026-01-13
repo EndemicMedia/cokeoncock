@@ -118,7 +118,7 @@ export default function CheckoutModal({ isOpen, onClose }) {
                           DROP YOUR <span className="text-matrix">ORDER</span>
                         </h2>
                         <p className="text-gray-400 font-mono text-sm">
-                          Fill this out. We'll hit you up to finalize. No cap.
+                          Fill this out. We'll reach out to confirm sizes, shipping, and payment.
                         </p>
                       </div>
 
@@ -202,7 +202,7 @@ export default function CheckoutModal({ isOpen, onClose }) {
                             onChange={handleChange}
                             rows="3"
                             className="input-brutal resize-none"
-                            placeholder="Any special requests? (We'll probably ignore them)"
+                            placeholder="Any special requests or timing?"
                           />
                         </div>
 
@@ -218,7 +218,7 @@ export default function CheckoutModal({ isOpen, onClose }) {
                       </form>
 
                       <p className="text-xs text-gray-600 text-center mt-4 font-mono">
-                        By submitting, you agree that nothing really matters anyway.
+                        We only use your info to finalize the order.
                       </p>
                     </motion.div>
                   ) : (

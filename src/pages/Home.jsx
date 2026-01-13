@@ -3,16 +3,19 @@ import { motion } from 'framer-motion'
 import { HiArrowRight } from 'react-icons/hi2'
 import Hero from '../components/Hero'
 import ProductHero from '../components/products/ProductHero'
+import HeroImageBanner from '../components/HeroImageBanner'
+import SplitBanner from '../components/SplitBanner'
+import TriptychBanner from '../components/TriptychBanner'
 import { products } from '../data/products'
 
 export default function Home() {
   // Featured products for hero sections
   const featuredProducts = [
-    { product: products.find(p => p.id === 2), accentColor: 'matrix' },     // Existential Dread Hoodie
-    { product: products.find(p => p.id === 1), accentColor: 'hotpink' },    // Reality Sucks Tee
-    { product: products.find(p => p.id === 8), accentColor: 'cyan' },       // Dead Inside Crewneck
-    { product: products.find(p => p.id === 4), accentColor: 'hotpink' },    // No Hope Tote
-    { product: products.find(p => p.id === 9), accentColor: 'matrix' },     // Whatever Dad Hat
+    { product: products.find(p => p.id === 2), accentColor: 'matrix' },     // Collective Heat Hoodie
+    { product: products.find(p => p.id === 1), accentColor: 'hotpink' },    // Wear Your Intent Tee
+    { product: products.find(p => p.id === 8), accentColor: 'cyan' },       // Heat Check Crewneck
+    { product: products.find(p => p.id === 4), accentColor: 'hotpink' },    // Crew Signal Tote Bag
+    { product: products.find(p => p.id === 9), accentColor: 'matrix' },     // Bad Idea Dad Hat
   ]
 
   return (
@@ -20,8 +23,37 @@ export default function Home() {
       {/* Main Hero */}
       <Hero />
 
+      {/* Marketing Banner 1: Lifestyle Hero */}
+      <HeroImageBanner
+        image="images/lifestyle-white-tee.jpg"
+        title="WEAR YOUR SIGNAL"
+        subtitle="Every piece is an invitation. Every outfit is a statement."
+      />
+
+      {/* Marketing Banner 2: Club Energy */}
+      <TriptychBanner
+        image="images/crew-club-scene.jpg"
+        title="COLLECTIVE HEAT"
+        description="When enough of you are in the room, the temperature changes. That's where crew energy becomes currency."
+      />
+
+      {/* Marketing Banner 3: Street Neon */}
+      <SplitBanner
+        image="images/crew-street-neon.jpg"
+        title="FIND YOUR PEOPLE FASTER"
+        description="Our pieces signal intent. The right people recognize the code. You'll spend less time looking and more time doing."
+        reverse={false}
+      />
+
+      {/* Marketing Banner 4: Party Energy */}
+      <HeroImageBanner
+        image="images/crew-party-purple.jpg"
+        title="NO SHAME. NO APOLOGIES."
+        subtitle="Celebrate play and desire without apology. This is for the ones who came to participate."
+      />
+
       {/* Divider */}
-      <div className="container mx-auto px-4 py-6 md:py-12">
+      <div className="container mx-auto px-4 py-8 md:py-12 bg-black">
         <div className="h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent"></div>
       </div>
 
