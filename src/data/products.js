@@ -5,7 +5,7 @@ export const products = [
     category: "tshirt",
     price: 35,
     description: "A readable invitation for crowded rooms and bold eye contact.",
-    image: "/images/tshirt-reality.jpg",
+    image: "images/product-wear-your-intent-tee.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
   {
@@ -14,7 +14,7 @@ export const products = [
     category: "hoodie",
     price: 65,
     description: "Presence piece for crews who move together. Turns up the room on entry.",
-    image: "/images/hoodie-dread.jpg",
+    image: "images/product-collective-heat-hoodie.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
   {
@@ -23,7 +23,7 @@ export const products = [
     category: "tank",
     price: 28,
     description: "For warm-ups and afters. Says you came to participate, not watch.",
-    image: "/images/tank-overthink.jpg",
+    image: "images/product-pre-game-signal-tank.jpg",
     sizes: ["S", "M", "L", "XL"]
   },
   {
@@ -32,7 +32,7 @@ export const products = [
     category: "tote",
     price: 22,
     description: "Crew currency. Carry it like a beacon. The right people will clock it.",
-    image: "/images/tote-nohope.jpg",
+    image: "images/product-crew-signal-tote.jpg",
     sizes: ["One Size"]
   },
   {
@@ -41,7 +41,7 @@ export const products = [
     category: "tshirt",
     price: 40,
     description: "Loose fit, loud intent. Makes introductions easy.",
-    image: "/images/tshirt-therapy.jpg",
+    image: "images/product-tee-flatlay.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
   {
@@ -50,7 +50,7 @@ export const products = [
     category: "hoodie",
     price: 70,
     description: "After-midnight layer for leaning in. Built for intimacy in crowded spaces.",
-    image: "/images/hoodie-numb.jpg",
+    image: "images/product-close-distance-hoodie.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
   {
@@ -59,7 +59,7 @@ export const products = [
     category: "longsleeve",
     price: 42,
     description: "Soft enough for afters, sharp enough for entry. Signals you came to play.",
-    image: "/images/longsleeve-monday.jpg",
+    image: "images/product-not-here-long-sleeve.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
   {
@@ -68,7 +68,7 @@ export const products = [
     category: "crewneck",
     price: 55,
     description: "Uniform for people who like the room electric. Crew-tested, night-proven.",
-    image: "/images/crewneck-dead.jpg",
+    image: "images/product-heat-check-crewneck.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
   {
@@ -77,7 +77,7 @@ export const products = [
     category: "hat",
     price: 25,
     description: "The finishing move. Wear it and mean it. A wink that invites the right kind of trouble.",
-    image: "/images/hat-whatever.jpg",
+    image: "images/product-bad-idea-dad-hat.jpg",
     sizes: ["One Size"]
   },
   {
@@ -86,7 +86,7 @@ export const products = [
     category: "hat",
     price: 28,
     description: "You'll see the crew in these. A readable badge for public flirtation.",
-    image: "/images/snapback-sadboy.jpg",
+    image: "images/product-crew-energy-snapback.jpg",
     sizes: ["One Size"]
   },
   {
@@ -95,7 +95,7 @@ export const products = [
     category: "beanie",
     price: 20,
     description: "Cold nights, warm plans. Says you came prepared to stay late.",
-    image: "/images/beanie-nottoday.jpg",
+    image: "images/product-stay-late-beanie.jpg",
     sizes: ["One Size"]
   },
   {
@@ -104,7 +104,7 @@ export const products = [
     category: "tank",
     price: 30,
     description: "Minimal layers for hot rooms. Visible, charged, ready.",
-    image: "/images/tank-barely.jpg",
+    image: "images/product-summer-signal-tank.jpg",
     sizes: ["S", "M", "L", "XL"]
   },
   {
@@ -113,7 +113,7 @@ export const products = [
     category: "tote",
     price: 24,
     description: "Carry your crew essentials. Heavy duty for pre-games and after-parties.",
-    image: "/images/tote-void.jpg",
+    image: "images/product-backroom-tote.jpg",
     sizes: ["One Size"]
   },
   {
@@ -122,7 +122,7 @@ export const products = [
     category: "tshirt",
     price: 38,
     description: "Membership piece. Wear it and the right people will lean in.",
-    image: "/images/tshirt-pessimist.jpg",
+    image: "images/product-participation-club-tee.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
   {
@@ -131,7 +131,7 @@ export const products = [
     category: "hoodie",
     price: 68,
     description: "For the between moments. Cozy enough to reset, charged enough to keep the heat up.",
-    image: "/images/hoodie-social.jpg",
+    image: "images/product-late-night-recharge-hoodie.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
   {
@@ -140,7 +140,7 @@ export const products = [
     category: "longsleeve",
     price: 45,
     description: "Wears like a smirk. Perfect for building the crew.",
-    image: "/images/longsleeve-sarcasm.jpg",
+    image: "images/product-wink-bite-long-sleeve.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
   {
@@ -149,7 +149,7 @@ export const products = [
     category: "sticker",
     price: 8,
     description: "Spread the signal. Mark your territory. Build the scene.",
-    image: "/images/stickers-pack.jpg",
+    image: "images/product-signal-sticker-pack.jpg",
     sizes: ["One Size"]
   },
   {
@@ -158,7 +158,7 @@ export const products = [
     category: "patch",
     price: 12,
     description: "Iron this on and you're claiming crew status. Visual proof you're in.",
-    image: "/images/patch-crisis.jpg",
+    image: "images/product-signal-sticker-pack.jpg",
     sizes: ["One Size"]
   },
   {
@@ -167,7 +167,7 @@ export const products = [
     category: "patch",
     price: 10,
     description: "The understated move. Anyone who gets it will recognize you.",
-    image: "/images/patch-meh.jpg",
+    image: "images/product-signal-sticker-pack.jpg",
     sizes: ["One Size"]
   },
   {
@@ -176,7 +176,7 @@ export const products = [
     category: "tshirt",
     price: 36,
     description: "The accelerant. Wear it and watch the room respond. Designed for skin and intent.",
-    image: "/images/tshirt-burnout.jpg",
+    image: "images/wear-your-intent-tee.jpg",
     sizes: ["XS", "S", "M", "L", "XL"]
   }
 ]
