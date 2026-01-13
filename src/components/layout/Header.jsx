@@ -1,3 +1,4 @@
+import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { HiShoppingBag } from 'react-icons/hi2'
 import { FaInstagram } from 'react-icons/fa'
@@ -5,6 +6,7 @@ import useCartStore from '../../store/useCartStore'
 
 export default function Header({ onCartClick }) {
   const totalItems = useCartStore(state => state.getTotalItems())
+  const location = useLocation()
 
   return (
     <motion.header
@@ -14,17 +16,47 @@ export default function Header({ onCartClick }) {
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="flex-1"
-        >
-          <h1 className="text-2xl md:text-4xl font-bold font-display">
-            COKE<span className="text-matrix">ON</span>COCK
-          </h1>
-          <p className="text-xs md:text-sm text-gray-400 font-mono -mt-1">
-            [ CYNICAL STREETWEAR ]
-          </p>
-        </motion.div>
+        <Link to="/">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="cursor-pointer"
+          >
+            <h1 className="text-2xl md:text-4xl font-bold font-display">
+              COKE<span className="text-matrix">ON</span>COCK
+            </h1>
+            <p className="text-xs md:text-sm text-gray-400 font-mono -mt-1">
+              [ CYNICAL STREETWEAR ]
+            </p>
+          </motion.div>
+        </Link>
+
+        {/* Navigation Links */}
+        <nav className="hidden md:flex items-center gap-6 flex-1 justify-center">
+          <Link to="/">
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              className={`text-lg font-bold uppercase tracking-wider transition-colors ${
+                location.pathname === '/'
+                  ? 'text-matrix border-b-2 border-matrix'
+                  : 'text-white hover:text-matrix'
+              }`}
+            >
+              Home
+            </motion.span>
+          </Link>
+          <Link to="/shop">
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              className={`text-lg font-bold uppercase tracking-wider transition-colors ${
+                location.pathname === '/shop'
+                  ? 'text-hotpink border-b-2 border-hotpink'
+                  : 'text-white hover:text-hotpink'
+              }`}
+            >
+              Shop
+            </motion.span>
+          </Link>
+        </nav>
 
         {/* Nav Icons */}
         <div className="flex items-center gap-4">
