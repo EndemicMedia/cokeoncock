@@ -64,7 +64,7 @@ export default function CartDrawer({ isOpen, onClose, onCheckout }) {
                             Your bag is empty
                           </p>
                           <p className="text-sm text-gray-600">
-                            Just like your soul. Add something.
+                            Load it with a signal and start the night.
                           </p>
                         </div>
                       ) : (
@@ -99,7 +99,7 @@ export default function CartDrawer({ isOpen, onClose, onCheckout }) {
                         </motion.button>
 
                         <p className="text-xs text-center text-gray-500 font-mono">
-                          No refunds. No regrets. Just vibes.
+                          No refunds. All energy. We'll confirm the details.
                         </p>
                       </div>
                     )}

@@ -25,7 +25,7 @@ export default function Header({ onCartClick }) {
               COKE<span className="text-matrix">ON</span>COCK
             </h1>
             <p className="text-xs md:text-sm text-gray-400 font-mono -mt-1">
-              [ CYNICAL STREETWEAR ]
+              [ SOCIAL HEAT STREETWEAR ]
             </p>
           </motion.div>
         </Link>

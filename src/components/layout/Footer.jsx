@@ -14,9 +14,9 @@ export default function Footer() {
               COKE<span className="text-matrix">ON</span>COCK
             </h3>
             <p className="text-gray-400 text-sm font-mono">
-              Cynical streetwear for those who get it.
+              A social accelerant for nights that start something.
               <br />
-              Reality sucks. Dress accordingly.
+              Wearable invitations for bold, public intent.
             </p>
           </div>
 
@@ -57,10 +57,10 @@ export default function Footer() {
           {/* Newsletter */}
           <div>
             <h4 className="text-lg font-bold mb-4 text-hotpink">
-              JOIN THE VOID
+              JOIN THE CREW
             </h4>
             <p className="text-sm text-gray-400 mb-3">
-              Get updates on drops. Or don't. We're not your boss.
+              Drop alerts, scene notes, and where to meet us.
             </p>
             <div className="flex gap-2">
               <input
@@ -77,9 +77,9 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="mt-8 pt-8 border-t-2 border-gray-800 text-center text-sm text-gray-500 font-mono">
-          <p>© {currentYear} COKE ON COCK. All rights reserved. Not that it matters.</p>
+          <p>© {currentYear} COKE ON COCK. All rights reserved. Made for participants.</p>
           <p className="mt-2 text-xs">
-            This is a parody brand. We're just here for the vibes (and your money).
+            Social heat, dirty humor, and crew-first nights.
           </p>
         </div>
       </div>

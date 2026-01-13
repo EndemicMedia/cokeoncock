@@ -8,11 +8,11 @@ import { products } from '../data/products'
 export default function Home() {
   // Featured products for hero sections
   const featuredProducts = [
-    { product: products.find(p => p.id === 2), accentColor: 'matrix' },     // Existential Dread Hoodie
-    { product: products.find(p => p.id === 1), accentColor: 'hotpink' },    // Reality Sucks Tee
-    { product: products.find(p => p.id === 8), accentColor: 'cyan' },       // Dead Inside Crewneck
-    { product: products.find(p => p.id === 4), accentColor: 'hotpink' },    // No Hope Tote
-    { product: products.find(p => p.id === 9), accentColor: 'matrix' },     // Whatever Dad Hat
+    { product: products.find(p => p.id === 2), accentColor: 'matrix' },     // Collective Heat Hoodie
+    { product: products.find(p => p.id === 1), accentColor: 'hotpink' },    // Wear Your Intent Tee
+    { product: products.find(p => p.id === 8), accentColor: 'cyan' },       // Heat Check Crewneck
+    { product: products.find(p => p.id === 4), accentColor: 'hotpink' },    // Crew Signal Tote Bag
+    { product: products.find(p => p.id === 9), accentColor: 'matrix' },     // Bad Idea Dad Hat
   ]
 
   return (
