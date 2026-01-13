@@ -35,10 +35,10 @@ export default function Home() {
             className="max-w-3xl mx-auto text-center"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-4 md:mb-6">
-              FEATURED <span className="bg-gradient-to-r from-matrix to-hotpink bg-clip-text text-transparent">ESSENTIALS</span>
+              <span className="bg-gradient-to-r from-matrix to-hotpink bg-clip-text text-transparent">CREW STARTER</span> PIECES
             </h2>
             <p className="text-base sm:text-lg text-gray-400 font-light max-w-xl mx-auto">
-              Curated pieces for those who refuse to compromise on authenticity.
+              Wearable invitations. Each piece signals intent and finds your people faster.
             </p>
           </motion.div>
         </div>
@@ -78,9 +78,9 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold font-display mb-6 md:mb-8"
             >
-              EXPLORE THE
+              FIND YOUR
               <br />
-              <span className="bg-gradient-to-r from-hotpink to-cyan bg-clip-text text-transparent">FULL COLLECTION</span>
+              <span className="bg-gradient-to-r from-hotpink to-cyan bg-clip-text text-transparent">UNIFORM</span>
             </motion.h2>
 
             <motion.p
@@ -90,7 +90,7 @@ export default function Home() {
               transition={{ delay: 0.1 }}
               className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 md:mb-12 font-light max-w-2xl mx-auto leading-relaxed"
             >
-              20+ items of uncompromising design. T-shirts, hoodies, accessories—everything you need to express what you won't say.
+              20+ pieces that signal intent. Designed for crowded rooms, eye contact, and starting something. No observers, only participants.
             </motion.p>
 
             <motion.div
@@ -123,53 +123,67 @@ export default function Home() {
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold font-display mb-8 md:mb-12 text-center">
-            WHY <span className="bg-gradient-to-r from-cyan to-hotpink bg-clip-text text-transparent">COKE ON COCK</span>?
+            HOW IT WORKS
           </h2>
 
           <div className="space-y-6 md:space-y-8 text-base sm:text-lg md:text-xl text-gray-300 font-light">
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
               className="border-l-4 border-matrix pl-6 md:pl-8 py-2"
             >
-              We don't sell you dreams. We sell you the truth: life is absurd, disappointing, and utterly meaningless.
-            </motion.p>
+              <p className="font-semibold text-white mb-2">The Invitation</p>
+              <p>You wear it to start things. A readable signal that says you're here for it.</p>
+            </motion.div>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
               className="border-l-4 border-hotpink pl-6 md:pl-8 py-2"
             >
-              But hey, at least you can look good while contemplating the void. Premium fabrics, bold statements, zero false hope.
-            </motion.p>
+              <p className="font-semibold text-white mb-2">The Crew</p>
+              <p>You wear it to find your people faster. Strangers become allies when the signal is right.</p>
+            </motion.div>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
               className="border-l-4 border-cyan pl-6 md:pl-8 py-2"
             >
-              Each piece is designed for the disillusioned generation. The ones who see through the BS and embrace the chaos with style.
-            </motion.p>
+              <p className="font-semibold text-white mb-2">The Room</p>
+              <p>You wear it to change the temperature. When enough of you are present, the space shifts. Collective heat.</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="border-l-4 border-matrix pl-6 md:pl-8 py-2"
+            >
+              <p className="font-semibold text-white mb-2">The Joke</p>
+              <p>You wear it because it's true, funny, and rude. We celebrate play and desire without apology.</p>
+            </motion.div>
           </div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.5 }}
             className="mt-12 md:mt-16 text-center"
           >
             <p className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-matrix via-hotpink to-cyan bg-clip-text text-transparent font-display mb-3 md:mb-4">
-              NO REFUNDS. NO REGRETS. JUST VIBES.
+              NO SHAME. NO APOLOGIES. NO OBSERVERS.
             </p>
             <p className="text-xs sm:text-sm text-gray-500 font-light tracking-wider uppercase">
-              (Authenticity guaranteed. Everything else is negotiable.)
+              Just participants, co-conspirators, and better nights.
             </p>
           </motion.div>
         </motion.div>
@@ -188,10 +202,10 @@ export default function Home() {
 
           <div className="relative z-10 p-8 md:p-12">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-display mb-4 md:mb-6">
-              JOIN THE <span className="bg-gradient-to-r from-matrix to-hotpink bg-clip-text text-transparent">REBELLION</span>
+              CREW <span className="bg-gradient-to-r from-matrix to-hotpink bg-clip-text text-transparent">ENERGY ONLY</span>
             </h3>
-            <p className="text-base sm:text-lg text-gray-300 mb-8 md:mb-10 font-light max-w-xl mx-auto">
-              Follow us on Instagram for new drops, behind-the-scenes chaos, and a community that gets it.
+            <p className="text-base sm:text-lg text-gray-300 mb-8 md:mb-10 font-light max-x xl mx-auto">
+              Follow for drops, dispatches from the scene, and to find your people. Bring someone with you.
             </p>
             <motion.a
               href="https://instagram.com/cokeoncock"
