@@ -20,11 +20,10 @@ export default function Hero() {
             className="space-y-4 md:space-y-6"
           >
             <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-display leading-tight tracking-tighter">
-              <span className="block">LIFE IS</span>
+              <span className="block">DRESS FOR</span>
               <span className="block bg-gradient-to-r from-hotpink via-matrix to-cyan bg-clip-text text-transparent py-2">
-                DISAPPOINTMENT
+                PARTICIPATION
               </span>
-              <span className="block">DRESS FOR IT</span>
             </h1>
           </motion.div>
 
@@ -36,10 +35,10 @@ export default function Hero() {
             className="space-y-3 md:space-y-4"
           >
             <p className="text-base sm:text-lg md:text-xl text-gray-300 font-light tracking-wide max-w-2xl mx-auto">
-              Cynical streetwear for the disillusioned generation.
+              Bring the heat. Find your crew. Make the room yours.
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto">
-              <span className="text-hotpink font-semibold">Reality sucks.</span> Might as well look good.
+              <span className="text-hotpink font-semibold">Wear your intentions.</span> This is a wearable invitation.
             </p>
           </motion.div>
 
@@ -69,7 +68,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-hotpink text-white font-bold text-sm sm:text-base md:text-lg uppercase tracking-wider rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              Follow @cokeoncock
+              Crew Energy Only
             </motion.a>
           </motion.div>
 
@@ -81,7 +80,7 @@ export default function Hero() {
             className="pt-8 md:pt-12"
           >
             <p className="text-xs sm:text-sm text-gray-500 font-light tracking-widest uppercase">
-              Premium fabrics. Zero compromises.
+              Designed for crowded rooms and close distances.
             </p>
           </motion.div>
         </div>
