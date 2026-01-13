@@ -4,7 +4,7 @@ export const products = [
     name: "Reality Sucks Tee",
     category: "tshirt",
     price: 35,
-    description: "100% organic cotton. 100% organic disappointment.",
+    description: "Premium cotton. Unfiltered truth. The shirt they should be scared of you wearing.",
     image: "/images/tshirt-reality.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
@@ -13,7 +13,7 @@ export const products = [
     name: "Existential Dread Hoodie",
     category: "hoodie",
     price: 65,
-    description: "Heavy blend fleece. Heavier existential weight.",
+    description: "Heavy blend for those who carry the weight. Wear it like armor against mediocrity.",
     image: "/images/hoodie-dread.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
@@ -22,7 +22,7 @@ export const products = [
     name: "Overthinking Everything Tank",
     category: "tank",
     price: 28,
-    description: "Lightweight fabric for heavy thoughts.",
+    description: "Lightweight. Bold. For minds that won't shut up at 3am.",
     image: "/images/tank-overthink.jpg",
     sizes: ["S", "M", "L", "XL"]
   },
@@ -31,7 +31,7 @@ export const products = [
     name: "No Hope Tote Bag",
     category: "tote",
     price: 22,
-    description: "Carry your disappointments in style. Canvas, not feelings.",
+    description: "Carry your contradictions in style. Premium canvas. Uncompromising attitude.",
     image: "/images/tote-nohope.jpg",
     sizes: ["One Size"]
   },
@@ -40,7 +40,7 @@ export const products = [
     name: "Therapy is Expensive Oversized Tee",
     category: "tshirt",
     price: 40,
-    description: "Oversized fit. Undersized self-esteem. Heavyweight cotton.",
+    description: "Oversized comfort. Maximum attitude. For when conformity isn't your thing.",
     image: "/images/tshirt-therapy.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
@@ -49,7 +49,7 @@ export const products = [
     name: "Numb Zip-Up Hoodie",
     category: "hoodie",
     price: 70,
-    description: "Premium zip-up. Zero feelings included.",
+    description: "Premium construction. Perfect for disappearing into your own world. No judgment.",
     image: "/images/hoodie-numb.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
@@ -58,7 +58,7 @@ export const products = [
     name: "Monday Mood Long Sleeve",
     category: "longsleeve",
     price: 42,
-    description: "Every day is Monday. Soft cotton, hard truth.",
+    description: "Soft outside. Sharp edge inside. For living on your own terms.",
     image: "/images/longsleeve-monday.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
@@ -67,7 +67,7 @@ export const products = [
     name: "Dead Inside Crewneck",
     category: "crewneck",
     price: 55,
-    description: "Vintage washed. Emotionally unavailable since birth.",
+    description: "Vintage wash. Vintage attitude. Born nonconformist. Stays that way.",
     image: "/images/crewneck-dead.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
@@ -76,7 +76,7 @@ export const products = [
     name: "Whatever Dad Hat",
     category: "hat",
     price: 25,
-    description: "Embroidered apathy. One size fits most souls.",
+    description: "Embroidered indifference. One size. Infinite attitude.",
     image: "/images/hat-whatever.jpg",
     sizes: ["One Size"]
   },
@@ -85,7 +85,7 @@ export const products = [
     name: "Sad Boy Snapback",
     category: "hat",
     price: 28,
-    description: "Structured crown. Unstructured emotions.",
+    description: "Structured crown for an unstructured life. Make them wonder what you're thinking.",
     image: "/images/snapback-sadboy.jpg",
     sizes: ["One Size"]
   },
@@ -94,7 +94,7 @@ export const products = [
     name: "Not Today Beanie",
     category: "beanie",
     price: 20,
-    description: "Cozy warmth. Cold demeanor. Acrylic blend.",
+    description: "Cozy defiance. Keep warm. Stay dangerous. Acrylic blend confidence.",
     image: "/images/beanie-nottoday.jpg",
     sizes: ["One Size"]
   },
@@ -103,7 +103,7 @@ export const products = [
     name: "Barely Functional Tank",
     category: "tank",
     price: 30,
-    description: "Muscle fit for those without the energy to flex.",
+    description: "Muscle fit for muscle memory. Wear what you believe. Nothing watered down.",
     image: "/images/tank-barely.jpg",
     sizes: ["S", "M", "L", "XL"]
   },
@@ -112,7 +112,7 @@ export const products = [
     name: "Void Tote Bag",
     category: "tote",
     price: 24,
-    description: "Heavy duty canvas. Light on optimism. 15oz fabric.",
+    description: "Heavy duty for heavy thoughts. 15oz canvas. Carry what matters to you.",
     image: "/images/tote-void.jpg",
     sizes: ["One Size"]
   },
@@ -121,7 +121,7 @@ export const products = [
     name: "Pessimist Club Tee",
     category: "tshirt",
     price: 38,
-    description: "Membership mandatory. Hope not included. Premium cut.",
+    description: "Membership required. Hope optional. Premium cut for the honest ones.",
     image: "/images/tshirt-pessimist.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
@@ -130,7 +130,7 @@ export const products = [
     name: "Social Battery Low Hoodie",
     category: "hoodie",
     price: 68,
-    description: "Pullover style. Perfect for avoiding everyone.",
+    description: "Pullover protection. Perfect for walls you build. Premium blend comfort.",
     image: "/images/hoodie-social.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
@@ -139,7 +139,7 @@ export const products = [
     name: "Sarcasm Loading Long Sleeve",
     category: "longsleeve",
     price: 45,
-    description: "Buffering... Still buffering... Never sincere.",
+    description: "Still buffering... Still thinking... Always sharp. Soft cotton edge.",
     image: "/images/longsleeve-sarcasm.jpg",
     sizes: ["S", "M", "L", "XL", "XXL"]
   },
@@ -148,7 +148,7 @@ export const products = [
     name: "Nihilist Logo Sticker Pack",
     category: "sticker",
     price: 8,
-    description: "Nothing matters. Stick them anywhere. Pack of 5.",
+    description: "Nothing matters but these stickers. Pack of 5. Spread the message.",
     image: "/images/stickers-pack.jpg",
     sizes: ["One Size"]
   },
@@ -157,7 +157,7 @@ export const products = [
     name: "Existential Crisis Patch",
     category: "patch",
     price: 12,
-    description: "Embroidered patch. Iron-on existentialism.",
+    description: "Embroidered philosophy. Iron-on rebellion. Stick it where it counts.",
     image: "/images/patch-crisis.jpg",
     sizes: ["One Size"]
   },
@@ -166,7 +166,7 @@ export const products = [
     name: "Meh Embroidered Patch",
     category: "patch",
     price: 10,
-    description: "Express your complete lack of enthusiasm.",
+    description: "Say nothing. Express everything. Perfect for those beyond caring.",
     image: "/images/patch-meh.jpg",
     sizes: ["One Size"]
   },
@@ -175,7 +175,7 @@ export const products = [
     name: "Burned Out Cropped Tee",
     category: "tshirt",
     price: 36,
-    description: "Cropped fit. Cropped motivation. Soft vintage wash.",
+    description: "Cropped cut. Uncompromised edge. Vintage wash wisdom. Own your chaos.",
     image: "/images/tshirt-burnout.jpg",
     sizes: ["XS", "S", "M", "L", "XL"]
   }
