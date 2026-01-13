@@ -1,8 +1,8 @@
-# 🖤 COKE ON COCK - Cynical Streetwear
+# 🖤 COKE ON COCK - Social Heat Streetwear
 
-> Reality sucks. Dress accordingly.
+> Wear your intentions.
 
-A neo-brutalist landing page for a trendy, cynical streetwear brand. Built with modern web technologies and deployed on GitHub Pages.
+A neo-brutalist landing page for a nightlife-first streetwear label. Built with modern web technologies and deployed on GitHub Pages.
 
 ![Coke on Cock](https://img.shields.io/badge/vibe-cynical-black?style=for-the-badge)
 ![Build Status](https://img.shields.io/github/actions/workflow/status/EndemicMedia/cokeoncock/deploy.yml?style=for-the-badge)
@@ -28,15 +28,105 @@ A neo-brutalist landing page for a trendy, cynical streetwear brand. Built with 
 
 ## 📦 Features
 
-- ✅ **Product Catalog**: 20+ items with filtering by category
-- ✅ **Shopping Cart**: Add/remove items, adjust quantities, localStorage persistence
-- ✅ **Product Quick View**: Modal with size selection
-- ✅ **Checkout Flow**: "Drop Your Order" - simplified order submission
-- ✅ **Instagram Integration**: Direct DM link with pre-filled order details
-- ✅ **Email Integration**: Mailto link with order summary
-- ✅ **Newsletter Signup**: Footer email capture (ready for ConvertKit integration)
-- ✅ **Social Links**: Instagram, Twitter, TikTok
-- ✅ **Mobile Optimized**: Responsive design with touch-friendly UI
+- 🛒 **Shopping Cart**: Add items, adjust quantities, calculate totals
+- 📱 **Responsive Navigation**: Mobile menu with animated transitions
+- 🖼️ **Product Gallery**: Grid layout with hover effects
+- ⚡ **Performance**: Optimized assets and lazy loading
+- 📧 **Checkout System**: Form-based checkout that generates pre-formatted messages
+- 🔍 **Product Filtering**: Filter by category (T-Shirts, Hoodies, etc.)
+- 📢 **Marketing Banners**: Dynamic hero sections for promotions
+
+## 🗺️ Product & Brand Roadmap
+
+### Phase 1: Revenue Foundation (Weeks 1-4)
+**Goal:** Fix critical conversion blockers and build operational foundation
+- [ ] Integrate Stripe Checkout (replace Instagram DM/email flow with real payment processing)
+- [ ] Shoot professional product photography (all 20 SKUs with lifestyle + flat lay)
+- [ ] Install Google Analytics 4 + Meta Pixel for conversion tracking
+- [ ] Add trust badges (secure checkout, 30-day returns, worldwide shipping)
+- [ ] Create and display clear shipping/returns policy
+- [ ] Add product size guide to reduce returns
+- [ ] Implement email capture widget (10% off + early access offer)
+- [ ] Set up Printful or similar print-on-demand fulfillment
+
+**Impact:** Expected 10-20x improvement in conversion rate (0.15% → 2-3%)
+
+### Phase 2: Growth Engine (Weeks 5-12)
+**Goal:** Build owned audience, establish FOMO, create community
+- [ ] Launch referral program ("Bring a Friend: Give 10%, Get $10")
+- [ ] Execute micro-influencer seeding campaign (20 nightlife influencers, 10-50k followers)
+- [ ] Launch first limited edition drop (Drop 01: 3-5 designs, 50-100 units each)
+- [ ] Host first real brand event (Berlin or NYC nightlife venue)
+- [ ] Integrate customer review system (Stamped.io or Yotpo)
+- [ ] Establish content calendar (3x/week Instagram: product, lifestyle, meme)
+- [ ] Launch TikTok strategy with vertical content
+- [ ] Create product bundles ("Crew Starter Pack", "Weekend Heat") to increase AOV
+- [ ] Add founder/origin story page to build authenticity
+- [ ] Start "Scene Report" blog (weekly: party review + city spotlight + interview)
+
+**Impact:** Build email list to 1k+, grow social followers to 10k+, establish drop model
+
+### Phase 3: Brand Depth (Weeks 13-24)
+**Goal:** Own the nightlife streetwear category globally
+- [ ] Shoot professional lookbook (10-15 styled looks in nightlife settings)
+- [ ] Expand product line: women's fits (cropped tee, fitted tank, baby tee)
+- [ ] Add bottoms to collection (track pants, shorts) for complete outfit capability
+- [ ] Create visual lookbook: "How to wear Coke on Cock" styled guides
+- [ ] Feature user-generated content on site (#CokeonCock hashtag + Instagram feed widget)
+- [ ] Develop city strategy (Berlin, NYC, LA, London, Amsterdam): local events and partnerships
+- [ ] Partner with 3-5 actual nightlife venues/DJs for ongoing brand presence
+- [ ] Create membership/VIP program (early access to drops, exclusive events)
+- [ ] Explore wholesale partnerships (select boutiques in major cities)
+- [ ] Publish 2-4 editorial pieces per month (interviews, city guides, culture pieces)
+
+**Impact:** Establish category leadership, increase AOV to $45-50, build passionate community
+
+### Key Performance Indicators
+
+Track these metrics monthly:
+- **Traffic:** Monthly site visitors, bounce rate, time on site
+- **Conversion:** Checkout completion rate, average order value, cart abandonment rate
+- **Community:** Email subscribers, social followers, referral conversions
+- **Product:** Top sellers by category, repeat purchase rate, return rate
+- **Brand:** Influencer mentions, user-generated content volume, event attendance
+
+### Revenue Projections
+
+**Conservative Scenario:**
+- Months 1-3: $2-5k/mo
+- Months 4-6: $8-12k/mo
+- Months 7-12: $15-25k/mo
+
+**Optimistic Scenario (viral moments + successful drops):**
+- Months 1-3: $5-10k/mo
+- Months 4-6: $20-40k/mo
+- Months 7-12: $50-100k/mo
+
+### Critical Dependencies & Risks
+
+**Must-Haves:**
+- Business entity for Stripe/payment processing (use neutral name per strategy notes)
+- Budget for professional product photography ($1000-2000) or DIY setup
+- Inventory management (Google Sheets or basic system) to prevent overselling
+- Marketing budget for influencer seeding and potential paid ads ($500-1000/mo)
+
+**Risks to Mitigate:**
+- Platform shadowbans: Use neutral business name in ads, avoid explicit creative
+- Authenticity: Host REAL events, feature real people, document actual nightlife (not just marketing)
+- Narrow niche: Global distribution across 5-6 major nightlife cities
+- Economic sensitivity: Strong value prop + accessible pricing ($35-70)
+
+### Technical Debt & Improvements
+
+**High Priority:**
+- Image optimization: Convert to WebP, lazy loading, reduce payload from 7.5MB to <2MB
+- Analytics integration: GA4 + Meta Pixel for full conversion tracking
+- Email service: Replace emailService.js stub with actual EmailJS config or Mailchimp integration
+
+**Medium Priority:**
+- SEO: Meta descriptions, alt text, schema markup for nightlife streetwear keywords
+- Mobile: Audit mobile experience at 375px, 768px, 1024px breakpoints
+- Performance: Monitor Lighthouse scores, optimize bundle size
 
 ## 🚀 Getting Started
 
@@ -66,17 +156,17 @@ npm run preview
 
 ## 🎯 Product Collection
 
-The site features a curated collection of cynical streetwear:
+The site features a curated collection of nightlife-ready streetwear:
 
-- **T-Shirts**: Reality Sucks, Therapy is Expensive, Pessimist Club, Burned Out
-- **Hoodies**: Existential Dread, Numb Zip-Up, Social Battery Low
-- **Tanks**: Overthinking Everything, Barely Functional
-- **Long Sleeves**: Monday Mood, Sarcasm Loading
-- **Crewnecks**: Dead Inside
-- **Tote Bags**: No Hope, Void
-- **Hats**: Whatever Dad Hat, Sad Boy Snapback
-- **Beanies**: Not Today
-- **Accessories**: Sticker Packs, Embroidered Patches
+- **T-Shirts**: Dress for Participation, Wear Your Intentions, Room Temperature Riser, No Spectators
+- **Hoodies**: Heat Seeker, After Hours Uniform, Crowd Voltage
+- **Tanks**: Close Distance, Make the Room Interesting
+- **Long Sleeves**: Night Signal, Better Corner
+- **Crewnecks**: Social Heat Standard
+- **Tote Bags**: Bring a Friend, Door Code
+- **Hats**: Not Here to Behave, Invitation Only
+- **Beanies**: Backroom
+- **Accessories**: Mark Stickers, Stamp Patches
 
 ## 🎨 Customization
 
@@ -103,7 +193,8 @@ export const products = [
     name: "Your Product",
     category: "tshirt",
     price: 35,
-    description: "Your cynical description",
+    description: "Product description",
+    image: "path/to/image.jpg",
     sizes: ["S", "M", "L", "XL"]
   }
 ]
@@ -133,14 +224,55 @@ npm run build
 2. Source: GitHub Actions
 3. The site will be available at: `https://endemicmedia.github.io/cokeoncock/`
 
+## 🧠 Brand Strategy
+
+### Strategic premise
+
+This brand is a social accelerant, turning nightlife into a shared language. The name is the provocation, the gear is the invitation. Build the label as the artistic front, and keep infrastructure (entity name, billing descriptors, domains) clean for platform access.
+
+### Golden circle
+
+**WHY:** Permission to want, collective heat, play as power.  
+**HOW:** Social signaling, ritualized drops, humor with teeth.  
+**WHAT:** A label, a universe, and codes people wear to broadcast intent.
+
+### Identity snapshot
+
+- **Core identity:** Erotic, social, daring, Berlin.
+- **Product:** A wearable wink that starts conversations.
+- **Organization:** A scene builder that links people and creates rooms.
+- **Person:** The friend who pulls you into the better corner of the club.
+- **Symbol:** A signature phrase + recurring motifs and jokes.
+
+### Voice and tone
+
+Short. Sharp. Hungry.  
+More invitation than explanation.  
+Flirt like you mean it.
+
+### Messaging pillars
+
+1. **The Invitation** — You wear it to start things.
+2. **The Room** — You wear it to change the temperature.
+3. **The Joke** — You wear it because it’s funny, rude, and true.
+4. **The Brandhood** — You wear it to find your people without locking into a fixed crew.
+
+### Tagline options
+
+- **Dress for participation.**
+- **Not here to behave.**
+- **Uniform for bad decisions.**
+- **Make the room interesting.**
+- **Wear your intentions.**
+
 ## 🎭 Brand Voice
 
-**Cynical. Sarcastic. Self-aware.**
+**Mischievous. Blunt. Confident.**
 
-- "Reality sucks. Might as well look good."
-- "Nothing matters. Stick them anywhere." (sticker pack)
-- "No refunds. No regrets. Just vibes."
-- "By submitting, you agree that nothing really matters anyway."
+- "Tonight, no spectators."
+- "Wear this if you plan to start something."
+- "Designed for crowded rooms and close distances."
+- "If you get it, you’re already in."
 
 ## 📄 License
 
