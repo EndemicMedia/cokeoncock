@@ -10,7 +10,13 @@
       "Bash(ls:*)",
       "Bash(node:*)",
       "Bash(pkill:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(tree:*)",
+      "Bash(cat:*)",
+      "Bash(wc:*)",
+      "mcp__sequential-thinking__sequentialthinking",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)"
     ]
   }
 }
