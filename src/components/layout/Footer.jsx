@@ -54,24 +54,43 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Newsletter */}
+          {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-4 text-hotpink">
-              JOIN THE CREW
-            </h4>
-            <p className="text-sm text-gray-400 mb-3">
-              Drop alerts, scene notes, and where to meet us.
-            </p>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="your@email.com"
-                className="flex-1 px-3 py-2 bg-black border-2 border-white text-white text-sm focus:outline-none focus:border-matrix"
-              />
-              <button className="px-4 py-2 bg-matrix text-black font-bold border-2 border-black hover:bg-hotpink hover:text-white transition-colors">
-                →
-              </button>
-            </div>
+            <h4 className="text-lg font-bold mb-4 text-cyan">QUICK LINKS</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a
+                  href="#/about"
+                  className="text-gray-400 hover:text-matrix transition-colors"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#/size-guide"
+                  className="text-gray-400 hover:text-hotpink transition-colors"
+                >
+                  Size Guide
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#/policies"
+                  className="text-gray-400 hover:text-cyan transition-colors"
+                >
+                  Policies
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#/shop"
+                  className="text-gray-400 hover:text-matrix transition-colors"
+                >
+                  Shop
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 

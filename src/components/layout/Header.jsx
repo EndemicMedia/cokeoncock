@@ -3,10 +3,13 @@ import { motion } from 'framer-motion'
 import { HiShoppingBag } from 'react-icons/hi2'
 import { FaInstagram } from 'react-icons/fa'
 import useCartStore from '../../store/useCartStore'
+import { useModal } from '../../contexts/ModalContext'
+import { SOCIAL_LINKS, SITE_CONFIG } from '../../config/constants'
 
-export default function Header({ onCartClick }) {
+export default function Header() {
   const totalItems = useCartStore(state => state.getTotalItems())
   const location = useLocation()
+  const { openCart } = useModal()
 
   return (
     <motion.header
@@ -25,7 +28,7 @@ export default function Header({ onCartClick }) {
               COKE<span className="text-matrix">ON</span>COCK
             </h1>
             <p className="text-xs md:text-sm text-gray-400 font-mono -mt-1">
-              [ SOCIAL HEAT STREETWEAR ]
+              [ {SITE_CONFIG.tagline.toUpperCase()} ]
             </p>
           </motion.div>
         </Link>
@@ -35,11 +38,10 @@ export default function Header({ onCartClick }) {
           <Link to="/">
             <motion.span
               whileHover={{ scale: 1.05 }}
-              className={`text-lg font-bold uppercase tracking-wider transition-colors ${
-                location.pathname === '/'
-                  ? 'text-matrix border-b-2 border-matrix'
-                  : 'text-white hover:text-matrix'
-              }`}
+              className={`text-lg font-bold uppercase tracking-wider transition-colors ${location.pathname === '/'
+                ? 'text-matrix border-b-2 border-matrix'
+                : 'text-white hover:text-matrix'
+                }`}
             >
               Home
             </motion.span>
@@ -47,13 +49,34 @@ export default function Header({ onCartClick }) {
           <Link to="/shop">
             <motion.span
               whileHover={{ scale: 1.05 }}
-              className={`text-lg font-bold uppercase tracking-wider transition-colors ${
-                location.pathname === '/shop'
-                  ? 'text-hotpink border-b-2 border-hotpink'
-                  : 'text-white hover:text-hotpink'
-              }`}
+              className={`text-lg font-bold uppercase tracking-wider transition-colors ${location.pathname === '/shop'
+                ? 'text-hotpink border-b-2 border-hotpink'
+                : 'text-white hover:text-hotpink'
+                }`}
             >
               Shop
+            </motion.span>
+          </Link>
+          <Link to="/about">
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              className={`text-lg font-bold uppercase tracking-wider transition-colors ${location.pathname === '/about'
+                ? 'text-cyan border-b-2 border-cyan'
+                : 'text-white hover:text-cyan'
+                }`}
+            >
+              About
+            </motion.span>
+          </Link>
+          <Link to="/size-guide">
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              className={`text-lg font-bold uppercase tracking-wider transition-colors ${location.pathname === '/size-guide'
+                ? 'text-matrix border-b-2 border-matrix'
+                : 'text-white hover:text-matrix'
+                }`}
+            >
+              Size Guide
             </motion.span>
           </Link>
         </nav>
@@ -62,7 +85,7 @@ export default function Header({ onCartClick }) {
         <div className="flex items-center gap-4">
           {/* Instagram */}
           <motion.a
-            href="https://instagram.com/cokeoncock"
+            href={SOCIAL_LINKS.instagram}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1, rotate: 5 }}
@@ -74,7 +97,7 @@ export default function Header({ onCartClick }) {
 
           {/* Cart */}
           <motion.button
-            onClick={onCartClick}
+            onClick={openCart}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             className="relative text-2xl md:text-3xl hover:text-cyan transition-colors"

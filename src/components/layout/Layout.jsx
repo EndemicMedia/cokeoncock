@@ -1,10 +1,10 @@
 import Header from './Header'
 import Footer from './Footer'
 
-export default function Layout({ children, onCartClick }) {
+export default function Layout({ children }) {
   return (
     <div className="min-h-screen bg-black text-white">
-      <Header onCartClick={onCartClick} />
+      <Header />
       <main className="pt-24">
         {children}
       </main>

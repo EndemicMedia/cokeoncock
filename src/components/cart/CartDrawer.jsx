@@ -2,18 +2,26 @@ import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { motion } from 'framer-motion'
 import { HiX } from 'react-icons/hi'
+import PropTypes from 'prop-types'
 import useCartStore from '../../store/useCartStore'
+import { useModal } from '../../contexts/ModalContext'
 import CartItem from './CartItem'
 
-export default function CartDrawer({ isOpen, onClose, onCheckout }) {
+export default function CartDrawer() {
   const items = useCartStore(state => state.items)
   const totalPrice = useCartStore(state => state.getTotalPrice())
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0)
+  const { isCartOpen, closeModal, openCheckout } = useModal()
+
+  const handleCheckout = () => {
+    closeModal()
+    openCheckout()
+  }
 
   return (
-    <Transition show={isOpen} as={Fragment}>
+    <Transition show={isCartOpen} as={Fragment}>
       <Dialog
-        onClose={onClose}
+        onClose={closeModal}
         className="relative z-50"
         aria-labelledby="cart-drawer-title"
       >
@@ -64,7 +72,7 @@ export default function CartDrawer({ isOpen, onClose, onCheckout }) {
                           )}
                         </Dialog.Title>
                         <button
-                          onClick={onClose}
+                          onClick={closeModal}
                           className="p-2 border-2 border-white hover:bg-hotpink hover:border-hotpink transition-colors"
                           aria-label="Close shopping cart"
                         >
@@ -115,7 +123,7 @@ export default function CartDrawer({ isOpen, onClose, onCheckout }) {
                         <motion.button
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
-                          onClick={onCheckout}
+                          onClick={handleCheckout}
                           className="w-full py-4 bg-matrix text-black font-bold uppercase border-4 border-black hover:bg-hotpink hover:text-white transition-colors"
                           aria-label={`Proceed to checkout with ${totalItems} items totaling ${totalPrice.toFixed(2)} dollars`}
                         >
@@ -136,4 +144,8 @@ export default function CartDrawer({ isOpen, onClose, onCheckout }) {
       </Dialog>
     </Transition>
   )
+}
+
+CartDrawer.propTypes = {
+  // Consumes from ModalContext, no props needed
 }

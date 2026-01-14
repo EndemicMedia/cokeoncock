@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion'
 import { HiMinus, HiPlus, HiTrash } from 'react-icons/hi2'
+import PropTypes from 'prop-types'
 import useCartStore from '../../store/useCartStore'
+import useImageLoader from '../../hooks/useImageLoader.jsx'
 
 export default function CartItem({ item }) {
   const updateQuantity = useCartStore(state => state.updateQuantity)
   const removeItem = useCartStore(state => state.removeItem)
+  const { imageError, handleImageError, ImageFallback } = useImageLoader(item.image)
 
   return (
     <motion.article
@@ -17,11 +20,16 @@ export default function CartItem({ item }) {
       <div className="flex gap-4">
         {/* Product Image */}
         <div className="w-20 h-20 bg-gray-900 border-2 border-gray-700 flex items-center justify-center flex-shrink-0 overflow-hidden">
-          <img
-            src={item.image}
-            alt={`${item.name} - ${item.category || 'product'} in your cart`}
-            className="w-full h-full object-cover"
-          />
+          {imageError ? (
+            <ImageFallback productName={item.name} size="sm" />
+          ) : (
+            <img
+              src={item.image}
+              alt={`${item.name} - ${item.category || 'product'} in your cart`}
+              onError={handleImageError}
+              className="w-full h-full object-cover"
+            />
+          )}
         </div>
 
         {/* Details */}
@@ -84,4 +92,16 @@ export default function CartItem({ item }) {
       </div>
     </motion.article>
   )
+}
+
+CartItem.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    size: PropTypes.string.isRequired,
+    quantity: PropTypes.number.isRequired,
+    price: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+    category: PropTypes.string
+  }).isRequired
 }

@@ -3,73 +3,88 @@ import { Dialog, Transition } from '@headlessui/react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiX } from 'react-icons/hi'
 import { FaInstagram, FaEnvelope } from 'react-icons/fa'
+import PropTypes from 'prop-types'
 import useCartStore from '../../store/useCartStore'
+import { useModal } from '../../contexts/ModalContext'
 import { generateInstagramMessage, generateEmailLink } from '../../utils/emailService'
+import { SOCIAL_LINKS } from '../../config/constants'
+import useFormValidation, { validators, composeValidators } from '../../hooks/useFormValidation'
 
-export default function CheckoutModal({ isOpen, onClose }) {
+export default function CheckoutModal() {
   const items = useCartStore(state => state.items)
   const totalPrice = useCartStore(state => state.getTotalPrice())
   const clearCart = useCartStore(state => state.clearCart)
+  const { isCheckoutOpen, closeModal } = useModal()
+  const [submitted, setSubmitted] = useState(false)
 
-  const [formData, setFormData] = useState({
+  const validate = (values) => {
+    const errors = {}
+    const nameError = validators.required(values.name)
+    const emailError = composeValidators(validators.required, validators.email)(values.email)
+
+    if (nameError) errors.name = nameError
+    if (emailError) errors.email = emailError
+
+    return errors
+  }
+
+  const initialValues = {
     name: '',
     email: '',
     instagram: '',
     notes: ''
-  })
+  }
 
-  const [submitted, setSubmitted] = useState(false)
+  const {
+    values,
+    errors,
+    touched,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+    resetForm
+  } = useFormValidation(initialValues, validate)
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Show success state
+  const handleOrderSubmit = (formData) => {
     setSubmitted(true)
   }
 
   const handleInstagramDM = () => {
     const orderData = {
-      ...formData,
+      ...values,
       items,
       total: totalPrice.toFixed(2)
     }
     const message = generateInstagramMessage(orderData)
-    window.open(`https://instagram.com/cokeoncock?message=${message}`, '_blank')
+    window.open(`${SOCIAL_LINKS.instagram}?message=${message}`, '_blank')
 
-    clearCart()
-    setTimeout(() => {
-      onClose()
-      setSubmitted(false)
-      setFormData({ name: '', email: '', instagram: '', notes: '' })
-    }, 1000)
+    finalizeOrder()
   }
 
   const handleEmailOrder = () => {
     const orderData = {
-      ...formData,
+      ...values,
       items,
       total: totalPrice.toFixed(2)
     }
     const emailLink = generateEmailLink(orderData)
     window.location.href = emailLink
 
+    finalizeOrder()
+  }
+
+  const finalizeOrder = () => {
     clearCart()
     setTimeout(() => {
-      onClose()
+      closeModal()
       setSubmitted(false)
-      setFormData({ name: '', email: '', instagram: '', notes: '' })
+      resetForm()
     }, 1000)
   }
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
   return (
-    <Transition show={isOpen} as={Fragment}>
-      <Dialog onClose={onClose} className="relative z-50">
+    <Transition show={isCheckoutOpen} as={Fragment}>
+      <Dialog onClose={closeModal} className="relative z-50">
         {/* Backdrop */}
         <Transition.Child
           as={Fragment}
@@ -97,10 +112,11 @@ export default function CheckoutModal({ isOpen, onClose }) {
             <Dialog.Panel className="w-full max-w-2xl bg-black border-4 border-white my-8">
               {/* Close Button */}
               <button
-                onClick={onClose}
+                onClick={closeModal}
                 className="absolute top-4 right-4 z-10 p-2 bg-black border-2 border-white hover:bg-hotpink hover:border-hotpink transition-colors"
+                aria-label="Close checkout modal"
               >
-                <HiX className="text-2xl" />
+                <HiX className="text-2xl" aria-hidden="true" />
               </button>
 
               <div className="p-8">
@@ -147,7 +163,10 @@ export default function CheckoutModal({ isOpen, onClose }) {
                       </div>
 
                       {/* Form */}
-                      <form onSubmit={handleSubmit} className="space-y-4">
+                      <form onSubmit={(e) => {
+                        e.preventDefault()
+                        handleSubmit(handleOrderSubmit)
+                      }} className="space-y-4">
                         <div>
                           <label className="block text-sm font-bold uppercase mb-2">
                             Name *
@@ -155,12 +174,16 @@ export default function CheckoutModal({ isOpen, onClose }) {
                           <input
                             type="text"
                             name="name"
-                            value={formData.name}
+                            value={values.name}
                             onChange={handleChange}
-                            required
-                            className="input-brutal"
+                            onBlur={handleBlur}
+                            className={`input-brutal ${touched.name && errors.name ? 'border-hotpink' : 'border-white'}`}
                             placeholder="Your name"
+                            aria-invalid={touched.name && errors.name ? 'true' : 'false'}
                           />
+                          {touched.name && errors.name && (
+                            <p className="text-hotpink text-xs mt-1">{errors.name}</p>
+                          )}
                         </div>
 
                         <div>
@@ -170,12 +193,16 @@ export default function CheckoutModal({ isOpen, onClose }) {
                           <input
                             type="email"
                             name="email"
-                            value={formData.email}
+                            value={values.email}
                             onChange={handleChange}
-                            required
-                            className="input-brutal"
+                            onBlur={handleBlur}
+                            className={`input-brutal ${touched.email && errors.email ? 'border-hotpink' : 'border-white'}`}
                             placeholder="your@email.com"
+                            aria-invalid={touched.email && errors.email ? 'true' : 'false'}
                           />
+                          {touched.email && errors.email && (
+                            <p className="text-hotpink text-xs mt-1">{errors.email}</p>
+                          )}
                         </div>
 
                         <div>
@@ -185,8 +212,9 @@ export default function CheckoutModal({ isOpen, onClose }) {
                           <input
                             type="text"
                             name="instagram"
-                            value={formData.instagram}
+                            value={values.instagram}
                             onChange={handleChange}
+                            onBlur={handleBlur}
                             className="input-brutal"
                             placeholder="@yourhandle"
                           />
@@ -198,8 +226,9 @@ export default function CheckoutModal({ isOpen, onClose }) {
                           </label>
                           <textarea
                             name="notes"
-                            value={formData.notes}
+                            value={values.notes}
                             onChange={handleChange}
+                            onBlur={handleBlur}
                             rows="3"
                             className="input-brutal resize-none"
                             placeholder="Any special requests or timing?"
@@ -242,8 +271,9 @@ export default function CheckoutModal({ isOpen, onClose }) {
                           whileTap={{ scale: 0.95 }}
                           onClick={handleInstagramDM}
                           className="w-full py-4 bg-hotpink text-white font-bold uppercase border-4 border-black flex items-center justify-center gap-3"
+                          aria-label="Send order details via Instagram Direct Message"
                         >
-                          <FaInstagram className="text-2xl" />
+                          <FaInstagram className="text-2xl" aria-hidden="true" />
                           Send via Instagram DM
                         </motion.button>
 
@@ -252,8 +282,9 @@ export default function CheckoutModal({ isOpen, onClose }) {
                           whileTap={{ scale: 0.95 }}
                           onClick={handleEmailOrder}
                           className="w-full py-4 bg-matrix text-black font-bold uppercase border-4 border-black flex items-center justify-center gap-3"
+                          aria-label="Send order details via Email"
                         >
-                          <FaEnvelope className="text-2xl" />
+                          <FaEnvelope className="text-2xl" aria-hidden="true" />
                           Send via Email
                         </motion.button>
                       </div>
@@ -271,4 +302,8 @@ export default function CheckoutModal({ isOpen, onClose }) {
       </Dialog>
     </Transition>
   )
+}
+
+CheckoutModal.propTypes = {
+  // Items are consumed from store, so no props needed but adding for consistency/future-proofing if needed
 }

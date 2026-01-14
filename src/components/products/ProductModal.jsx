@@ -1,50 +1,25 @@
 import { Fragment, useState, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { HiX } from 'react-icons/hi'
+import { HiX, HiShoppingBag, HiHeart } from 'react-icons/hi'
+import PropTypes from 'prop-types'
 import useCartStore from '../../store/useCartStore'
+import { useModal } from '../../contexts/ModalContext'
+import useImageLoader from '../../hooks/useImageLoader.jsx'
+import { updateProductMeta, resetMetaTags } from '../../utils/seo'
 
 export default function ProductModal({ product, isOpen, onClose }) {
   const [selectedSize, setSelectedSize] = useState('')
-  const [imageError, setImageError] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
   const addItem = useCartStore(state => state.addItem)
+  const { imageError, handleImageError, ImageFallback } = useImageLoader(product?.image)
 
   // Update document title and meta when product changes
   useEffect(() => {
     if (product && isOpen) {
-      const originalTitle = document.title
-      document.title = `${product.name} - Coke on Cock`
-
-      // Update meta description
-      const metaDescription = document.querySelector('meta[name="description"]')
-      const originalDescription = metaDescription?.getAttribute('content')
-      if (metaDescription) {
-        metaDescription.setAttribute('content', `${product.description} Shop ${product.name} at Coke on Cock - Social Heat Streetwear.`)
-      }
-
-      // Update Open Graph tags
-      const ogTitle = document.querySelector('meta[property="og:title"]')
-      const ogDescription = document.querySelector('meta[property="og:description"]')
-      const ogImage = document.querySelector('meta[property="og:image"]')
-      const twitterTitle = document.querySelector('meta[property="twitter:title"]')
-      const twitterDescription = document.querySelector('meta[property="twitter:description"]')
-      const twitterImage = document.querySelector('meta[property="twitter:image"]')
-
-      const productImageUrl = `https://endemicmedia.github.io/cokeoncock/${product.image}`
-
-      if (ogTitle) ogTitle.setAttribute('content', `${product.name} - Coke on Cock`)
-      if (ogDescription) ogDescription.setAttribute('content', product.description)
-      if (ogImage) ogImage.setAttribute('content', productImageUrl)
-      if (twitterTitle) twitterTitle.setAttribute('content', `${product.name} - Coke on Cock`)
-      if (twitterDescription) twitterDescription.setAttribute('content', product.description)
-      if (twitterImage) twitterImage.setAttribute('content', productImageUrl)
-
+      updateProductMeta(product)
       return () => {
-        document.title = originalTitle
-        if (metaDescription && originalDescription) {
-          metaDescription.setAttribute('content', originalDescription)
-        }
+        resetMetaTags()
       }
     }
   }, [product, isOpen])
@@ -112,19 +87,12 @@ export default function ProductModal({ product, isOpen, onClose }) {
                 {/* Image */}
                 <div className="aspect-square bg-gray-900">
                   {imageError ? (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-900 to-black" role="img" aria-label={`${product.name} product image unavailable`}>
-                      <div className="text-center p-6">
-                        <p className="text-9xl mb-4" aria-hidden="true">🖤</p>
-                        <p className="text-xl text-gray-500 font-mono">
-                          {product.name}
-                        </p>
-                      </div>
-                    </div>
+                    <ImageFallback productName={product.name} size="lg" />
                   ) : (
                     <img
                       src={product.image}
                       alt={`${product.name} - ${product.category} from Coke on Cock Social Heat Streetwear collection`}
-                      onError={() => setImageError(true)}
+                      onError={handleImageError}
                       className="w-full h-full object-cover"
                     />
                   )}
@@ -171,8 +139,8 @@ export default function ProductModal({ product, isOpen, onClose }) {
                             aria-checked={selectedSize === size}
                             aria-label={`Size ${size}`}
                             className={`px-4 py-2 font-bold border-2 transition-all ${selectedSize === size
-                                ? 'bg-matrix text-black border-black'
-                                : 'bg-black text-white border-white hover:border-matrix'
+                              ? 'bg-matrix text-black border-black'
+                              : 'bg-black text-white border-white hover:border-matrix'
                               }`}
                           >
                             {size}
@@ -207,8 +175,8 @@ export default function ProductModal({ product, isOpen, onClose }) {
                         aria-disabled={!selectedSize}
                         aria-label={selectedSize ? `Add ${product.name} size ${selectedSize} to shopping bag` : 'Please select a size first'}
                         className={`w-full py-4 font-bold uppercase border-4 transition-all ${selectedSize
-                            ? 'bg-white text-black border-black hover:bg-matrix cursor-pointer'
-                            : 'bg-gray-800 text-gray-500 border-gray-700 cursor-not-allowed'
+                          ? 'bg-white text-black border-black hover:bg-matrix cursor-pointer'
+                          : 'bg-gray-800 text-gray-500 border-gray-700 cursor-not-allowed'
                           }`}
                       >
                         {selectedSize ? 'Add to Bag' : 'Select a Size'}
@@ -223,4 +191,23 @@ export default function ProductModal({ product, isOpen, onClose }) {
       </Dialog>
     </Transition>
   )
+}
+
+ProductModal.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    sizes: PropTypes.arrayOf(PropTypes.string).isRequired
+  }),
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired
+}
+
+ProductModal.defaultProps = {
+  product: null
 }

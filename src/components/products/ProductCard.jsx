@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import PropTypes from 'prop-types'
+import useImageLoader from '../../hooks/useImageLoader.jsx'
 
 export default function ProductCard({ product, onClick }) {
-  const [imageError, setImageError] = useState(false)
+  const { imageError, handleImageError, ImageFallback } = useImageLoader(product.image)
 
   return (
     <motion.article
@@ -24,23 +25,12 @@ export default function ProductCard({ product, onClick }) {
       {/* Image */}
       <div className="aspect-square bg-gray-900 relative overflow-hidden">
         {imageError ? (
-          <div
-            className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-900 to-black"
-            role="img"
-            aria-label={`${product.name} image unavailable`}
-          >
-            <div className="text-center p-6">
-              <p className="text-6xl mb-4" aria-hidden="true">🖤</p>
-              <p className="text-sm text-gray-500 font-mono">
-                {product.name}
-              </p>
-            </div>
-          </div>
+          <ImageFallback productName={product.name} size="sm" />
         ) : (
           <img
             src={product.image}
             alt={`${product.name} - ${product.category} from Coke on Cock collection`}
-            onError={() => setImageError(true)}
+            onError={handleImageError}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             loading="lazy"
           />
@@ -87,4 +77,16 @@ export default function ProductCard({ product, onClick }) {
       </div>
     </motion.article>
   )
+}
+
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired
+  }).isRequired,
+  onClick: PropTypes.func.isRequired
 }
