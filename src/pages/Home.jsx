@@ -52,7 +52,7 @@ export default function Home() {
         <SplitBanner
           image="images/crew-street-neon.jpg"
           title="FIND YOUR PEOPLE FASTER"
-          description="Our pieces signal intent. The right people recognize the code. You'll spend less time looking and more time doing."
+          description="Our pieces signal intent. The right people recognize it. Less time looking more time living."
           reverse={false}
         />
 
@@ -60,7 +60,7 @@ export default function Home() {
         <HeroImageBanner
           image="images/crew-party-purple.jpg"
           title="NO SHAME. NO APOLOGIES."
-          subtitle="Celebrate play and desire without apology. This is for the ones who came to participate."
+          subtitle="Celebrate play and desire without apology."
         />
 
         {/* Marketing Banner 4: Lifestyle Hero */}
@@ -86,10 +86,10 @@ export default function Home() {
               className="max-w-3xl mx-auto text-center"
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-4 md:mb-6">
-                <span className="bg-gradient-to-r from-matrix to-hotpink bg-clip-text text-transparent">CREW STARTER</span> PIECES
+                <span className="bg-gradient-to-r from-matrix to-hotpink bg-clip-text text-transparent">Trouble, but pretty</span>
               </h2>
               <p className="text-base sm:text-lg text-gray-400 font-light max-w-xl mx-auto">
-                Wearable invitations. Each piece signals intent and finds your people faster.
+                Wearable invitations.
               </p>
             </motion.div>
           </div>

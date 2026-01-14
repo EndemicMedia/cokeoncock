@@ -35,10 +35,10 @@ export default function Hero() {
             className="space-y-3 md:space-y-4"
           >
             <p className="text-base sm:text-lg md:text-xl text-gray-300 font-light tracking-wide max-w-2xl mx-auto">
-              Bring the heat. Find your crew. Make the room yours.
+              Bad decisions, great taste.
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto">
-              <span className="text-hotpink font-semibold">Wear your intentions.</span> This is a wearable invitation.
+              <span className="text-hotpink font-semibold">Wear your intentions.</span> Handle with confidence.
             </p>
           </motion.div>
 
@@ -68,7 +68,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-hotpink text-white font-bold text-sm sm:text-base md:text-lg uppercase tracking-wider rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              Crew Energy Only
+              Trouble, but pretty
             </motion.a>
           </motion.div>
 

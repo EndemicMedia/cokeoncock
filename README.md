@@ -1,6 +1,6 @@
 # 🖤 COKE ON COCK - Social Heat Streetwear
 
-> Wear your intentions.
+> Bad decisions, great taste.
 
 A neo-brutalist landing page for a nightlife-first streetwear label. Built with modern web technologies and deployed on GitHub Pages.
 
@@ -26,6 +26,19 @@ A neo-brutalist landing page for a nightlife-first streetwear label. Built with 
 - **Order Handling**: Instagram DM / Email integration (no backend required)
 - **Deployment**: GitHub Pages with GitHub Actions
 
+## 📸 Image Generation Guidelines
+
+All product images must strictly adhere to the following style to maintain brand consistency:
+
+**Style:** Sterile, high-quality product photography flatlay.
+**Background:** Plain, neutral (white or light grey).
+**Subject:** Garment laid flat, no models.
+**Lighting:** Studio lighting, sharp focus, minimal shadows.
+**Branding:** The 'COKE ON COCK' logo (public/images/logo.png) must be printed PROMINENTLY and clearly on the chest/front.
+
+**Prompt Template:**
+> "A sterile, high-quality product photography flatlay shot of a [COLOR] [GARMENT TYPE]. The [GARMENT] is laid flat on a plain, neutral (white or light grey) background. No models. 'COKE ON COCK' logo (public/images/logo.png) is printed PROMINENTLY and clearly on the chest (or side, or back etc). Studio lighting, sharp focus, minimal shadows, high resolution, realistic texture."
+
 ## 📦 Features
 
 - 🛒 **Shopping Cart**: Add items, adjust quantities, calculate totals
@@ -40,12 +53,15 @@ A neo-brutalist landing page for a nightlife-first streetwear label. Built with 
 
 ### Phase 1: Revenue Foundation ✅ COMPLETE
 **Goal:** Fix critical conversion blockers and build operational foundation
-- [x] Expand product line: women's fits (cropped tee, fitted tank, baby tee)
+- [x] Expand product line: women's fits (cropped tees, fitted tanks, fitted tees)
+- [x] Add POD-compatible products (joggers, shorts, socks, bucket hat, fanny pack, phone case, heavyweight hoodie)
+- [x] Simplify product categories from 15 to 6 (Tops, Bottoms, Head, Bags, Accessories)
 - [x] Add founder/origin story page to build authenticity
 - [x] Add trust badges (secure checkout, 30-day returns, worldwide shipping)
 - [x] Create and display clear shipping/returns policy
 - [x] Add product size guide to reduce returns
 - [x] Implement email capture widget (10% off + early access offer)
+- [x] Implement sold-out product display (stickers/patches)
 - [x] Feature user-generated content on site (Instagram feed widget - **deferred to Phase 2**)
 
 ### Phase 2: Growth Engine (Weeks 5-12)
@@ -99,7 +115,7 @@ Track these metrics monthly:
 ### Technical Debt & Improvements
 
 **High Priority:**
-- Image optimization: Convert to WebP, lazy loading, reduce payload from 7.5MB to <2MB
+- ✅ Image optimization: Optimized all images, reduced payload from ~9.4MB to 7.7MB
 - Analytics integration: GA4 + Meta Pixel for full conversion tracking
 - Email service: Replace emailService.js stub with actual EmailJS config or Mailchimp integration
 
@@ -136,17 +152,36 @@ npm run preview
 
 ## 🎯 Product Collection
 
-The site features a curated collection of nightlife-ready streetwear:
+The site features a curated collection of nightlife-ready streetwear (30 products):
 
-- **T-Shirts**: Dress for Participation, Wear Your Intentions, Room Temperature Riser, No Spectators
-- **Hoodies**: Heat Seeker, After Hours Uniform, Crowd Voltage
-- **Tanks**: Close Distance, Make the Room Interesting
-- **Long Sleeves**: Night Signal, Better Corner
-- **Crewnecks**: Social Heat Standard
-- **Tote Bags**: Bring a Friend, Door Code
-- **Hats**: Not Here to Behave, Invitation Only
-- **Beanies**: Backroom
-- **Accessories**: Mark Stickers, Stamp Patches
+### Tops (20 items)
+- **T-Shirts (Regular)**: Wear Your Intent, Participation Club
+- **T-Shirts (Oversized)**: Room Starter
+- **T-Shirts (Cropped)**: First Move, Close Quarters
+- **T-Shirts (Fitted)**: Invitation Only, After Hours
+- **Long Sleeves**: Not Here to Behave, Wink & Bite
+- **Hoodies**: Close Distance Zip-Up, Late Night Recharge, Heavyweight Presence (240 GSM)
+- **Crewnecks**: Heat Check
+- **Tanks (Regular)**: Pre-Game Signal
+- **Tanks (Fitted)**: Heat Signature, Backroom Access (logo on back)
+
+### Bottoms (3 items)
+- **Joggers**: Late Night (300 GSM heavyweight)
+- **Shorts**: Summer Heat Sweat
+- **Socks**: Crew Energy (embroidered)
+
+### Head (4 items)
+- **Hats**: Bad Idea Dad Hat, Night Energy Snapback, Scene Watcher Bucket Hat
+- **Beanies**: Stay-Late
+
+### Bags (3 items)
+- **Totes**: Signal, Backroom
+- **Fanny Pack**: Night Essentials (all-over print)
+
+### Accessories (3 items - SOLD OUT)
+- **Phone Case**: Signal (tough double-layer)
+- **Stickers**: Signal Pack (sold out)
+- **Patches**: Scene Mark, Side-Eye Embroidered (sold out)
 
 ## 🎨 Customization
 
@@ -237,22 +272,43 @@ Flirt like you mean it.
 3. **The Joke** — You wear it because it’s funny, rude, and true.
 4. **The Brandhood** — You wear it to find your people without locking into a fixed crew.
 
-### Tagline options
+### Current Taglines (In Use)
+
+- **Primary**: "Bad decisions, great taste." (Hero opening)
+- **Subtle**: "Handle with confidence." (Hero secondary)
+- **Instagram CTA**: "Trouble, but pretty."
+- **Shop Header**: "Warning:"
+- **Product Grid**: "Wearable invitations."
+
+### Additional Tagline Options
 
 - **Dress for participation.**
 - **Not here to behave.**
 - **Uniform for bad decisions.**
 - **Make the room interesting.**
 - **Wear your intentions.**
+- **Designed for crowded rooms and close distances.**
 
 ## 🎭 Brand Voice
 
-**Mischievous. Blunt. Confident.**
+**Mischievous. Blunt. Confident. Provocative.**
 
-- "Tonight, no spectators."
-- "Wear this if you plan to start something."
+### Current Voice Examples
+
+- "Bad decisions, great taste."
+- "Handle with confidence."
+- "Trouble, but pretty."
+- "Wear your intentions."
 - "Designed for crowded rooms and close distances."
-- "If you get it, you’re already in."
+- "Born in nights where strangers become allies."
+- "A uniform for participants."
+
+### Product Voice Examples
+
+- "Short enough to signal, bold enough to start it. The opening line you wear."
+- "For packed dance floors and deliberate proximity. Cropped for movement, cut for attention."
+- "Sleek lines, sharp intent. Logo on the back. For the ones who know where the real party is."
+- "240 GSM premium heavyweight. Oversized fit, luxury fabric. The flagship piece."
 
 ## 📄 License
 

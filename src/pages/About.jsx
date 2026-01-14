@@ -84,30 +84,30 @@ export default function About() {
                     {...ANIMATIONS.fadeInView}
                     className="max-w-4xl mx-auto"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold font-display mb-12">
+                    {/* <h2 className="text-3xl md:text-5xl font-bold font-display mb-12">
                         WHAT WE <span className="text-cyan">BELIEVE</span>
-                    </h2>
+                    </h2> */}
 
                     <div className="space-y-12">
                         {/* Strategic Premise */}
-                        <div>
+                        {/* <div>
                             <h3 className="text-xl md:text-2xl font-bold text-matrix mb-4">Social Accelerant</h3>
                             <p className="text-gray-300 text-lg leading-relaxed">
                                 This brand is a social accelerant. It turns nightlife into a shared language.
                                 The name is a provocation and a filter—it calls in people who want charged environments,
                                 fast bonding, and flirtation that is public, playful, and unapologetic.
                             </p>
-                        </div>
+                        </div> */}
 
                         {/* Why We Exist */}
-                        <div>
+                        {/* <div>
                             <h3 className="text-xl md:text-2xl font-bold text-hotpink mb-4">Permission to Want</h3>
                             <p className="text-gray-300 text-lg leading-relaxed">
                                 We exist to make desire socially legible. Not hidden, not ironic, not polite.
                                 We create group electricity—the feeling that the room is conspiring in your favor.
                                 We celebrate adult play, dirty humor, and lust as confidence.
                             </p>
-                        </div>
+                        </div> */}
 
                         {/* How We Do It */}
                         <div>
@@ -115,15 +115,15 @@ export default function About() {
                             <ul className="space-y-3 text-gray-300 text-lg">
                                 <li className="flex items-start">
                                     <span className="text-matrix mr-3">→</span>
-                                    <span><strong>Social signaling</strong> — Clothing as a readable invitation, not a diary</span>
+                                    <span><strong>Social signaling.</strong> Clothing as a readable invitation</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-hotpink mr-3">→</span>
-                                    <span><strong>Ritual</strong> — Drops that map to nights, circles, and moments, not seasons</span>
+                                    <span><strong>Ritual.</strong> Drops that map to nights, circles, and moments, not seasons</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-cyan mr-3">→</span>
-                                    <span><strong>Humor with teeth</strong> — The brand smirks, it does not explain itself</span>
+                                    <span><strong>Humor with teeth.</strong> The brand smirks, it does not explain itself</span>
                                 </li>
                             </ul>
                         </div>
@@ -157,7 +157,7 @@ export default function About() {
             </div>
 
             {/* Brand Voice */}
-            <section className="container mx-auto px-4 py-16 md:py-24">
+            {/* <section className="container mx-auto px-4 py-16 md:py-24">
                 <motion.div
                     {...ANIMATIONS.fadeInView}
                     className="max-w-4xl mx-auto"
@@ -187,7 +187,6 @@ export default function About() {
                             </div>
                         </div>
 
-                        {/* Sample Copy */}
                         <div className="bg-gray-900 border-4 border-white p-8 mt-8">
                             <h4 className="text-xl font-bold mb-6">Sample Lines</h4>
                             <div className="grid md:grid-cols-3 gap-6 text-gray-300">
@@ -219,7 +218,7 @@ export default function About() {
                         </div>
                     </div>
                 </motion.div>
-            </section>
+            </section> */}
 
             {/* Final Statement */}
             <section className="container mx-auto px-4 py-16 md:py-24">
@@ -228,10 +227,10 @@ export default function About() {
                     className="max-w-3xl mx-auto text-center"
                 >
                     <p className="text-2xl md:text-4xl font-bold font-display leading-tight">
-                        Born in Berlin nights where strangers become allies.
+                        Born in nights where strangers become allies.
                     </p>
                     <p className="text-xl md:text-2xl text-gray-400 mt-6 font-mono">
-                        A uniform for participants, not observers.
+                        A uniform for participants.
                     </p>
                     <p className="text-lg md:text-xl text-hotpink mt-4 font-mono">
                         If you get it, you're already in.

@@ -9,14 +9,14 @@ export default function ProductCard({ product, onClick }) {
     <motion.article
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      whileHover={{ y: -4 }}
-      onClick={onClick}
-      className="card-brutal cursor-pointer group"
+      whileHover={product.soldOut ? {} : { y: -4 }}
+      onClick={product.soldOut ? undefined : onClick}
+      className={`card-brutal ${product.soldOut ? 'cursor-not-allowed opacity-75' : 'cursor-pointer'} group`}
       role="listitem"
-      aria-label={`${product.name}, ${product.category}, $${product.price}`}
-      tabIndex={0}
+      aria-label={`${product.name}, ${product.category}, $${product.price}${product.soldOut ? ' - Sold Out' : ''}`}
+      tabIndex={product.soldOut ? -1 : 0}
       onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+        if (!product.soldOut && (e.key === 'Enter' || e.key === ' ')) {
           e.preventDefault()
           onClick()
         }
@@ -38,6 +38,17 @@ export default function ProductCard({ product, onClick }) {
 
         {/* Hover Overlay */}
         <div className="absolute inset-0 bg-matrix opacity-0 group-hover:opacity-20 transition-opacity" aria-hidden="true" />
+
+        {/* SOLD OUT Badge */}
+        {product.soldOut && (
+          <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center z-10">
+            <div className="bg-red-600 border-4 border-white px-6 py-3 transform -rotate-12">
+              <span className="text-white font-bold text-xl uppercase tracking-wider">
+                SOLD OUT
+              </span>
+            </div>
+          </div>
+        )}
 
         {/* Category Badge */}
         <div
