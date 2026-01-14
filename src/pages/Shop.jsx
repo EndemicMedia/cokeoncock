@@ -26,7 +26,7 @@ export default function Shop() {
           <p className="text-xl text-gray-400 font-mono">
             Browse the full collection of night-ready signals.
             <br />
-            <span className="text-hotpink">Trouble, but pretty.</span> These pieces are designed to start things.
+            <span className="text-hotpink">Warning:</span> These pieces are designed to start things.
           </p>
         </motion.div>
       </section>

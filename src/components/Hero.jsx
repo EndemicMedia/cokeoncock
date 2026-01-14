@@ -35,7 +35,7 @@ export default function Hero() {
             className="space-y-3 md:space-y-4"
           >
             <p className="text-base sm:text-lg md:text-xl text-gray-300 font-light tracking-wide max-w-2xl mx-auto">
-              Bad decisions, great taste. Find your crew. Make the room yours.
+              Bring the heat. Find your crew. Make the room yours.
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto">
               <span className="text-hotpink font-semibold">Wear your intentions.</span> This is a wearable invitation.
@@ -80,7 +80,7 @@ export default function Hero() {
             className="pt-8 md:pt-12"
           >
             <p className="text-xs sm:text-sm text-gray-500 font-light tracking-widest uppercase">
-              Handle with confidence.
+              Designed for crowded rooms and close distances.
             </p>
           </motion.div>
         </div>
