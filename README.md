@@ -40,16 +40,12 @@ A neo-brutalist landing page for a nightlife-first streetwear label. Built with 
 
 ### Phase 1: Revenue Foundation (Weeks 1-4)
 **Goal:** Fix critical conversion blockers and build operational foundation
-- [ ] Integrate Stripe Checkout (replace Instagram DM/email flow with real payment processing)
-- [ ] Shoot professional product photography (all 20 SKUs with lifestyle + flat lay)
 - [ ] Install Google Analytics 4 + Meta Pixel for conversion tracking
 - [ ] Add trust badges (secure checkout, 30-day returns, worldwide shipping)
 - [ ] Create and display clear shipping/returns policy
 - [ ] Add product size guide to reduce returns
 - [ ] Implement email capture widget (10% off + early access offer)
 - [ ] Set up Printful or similar print-on-demand fulfillment
-
-**Impact:** Expected 10-20x improvement in conversion rate (0.15% → 2-3%)
 
 ### Phase 2: Growth Engine (Weeks 5-12)
 **Goal:** Build owned audience, establish FOMO, create community
@@ -64,8 +60,6 @@ A neo-brutalist landing page for a nightlife-first streetwear label. Built with 
 - [ ] Add founder/origin story page to build authenticity
 - [ ] Start "Scene Report" blog (weekly: party review + city spotlight + interview)
 
-**Impact:** Build email list to 1k+, grow social followers to 10k+, establish drop model
-
 ### Phase 3: Brand Depth (Weeks 13-24)
 **Goal:** Own the nightlife streetwear category globally
 - [ ] Shoot professional lookbook (10-15 styled looks in nightlife settings)
@@ -76,10 +70,6 @@ A neo-brutalist landing page for a nightlife-first streetwear label. Built with 
 - [ ] Develop city strategy (Berlin, NYC, LA, London, Amsterdam): local events and partnerships
 - [ ] Partner with 3-5 actual nightlife venues/DJs for ongoing brand presence
 - [ ] Create membership/VIP program (early access to drops, exclusive events)
-- [ ] Explore wholesale partnerships (select boutiques in major cities)
-- [ ] Publish 2-4 editorial pieces per month (interviews, city guides, culture pieces)
-
-**Impact:** Establish category leadership, increase AOV to $45-50, build passionate community
 
 ### Key Performance Indicators
 
@@ -91,16 +81,6 @@ Track these metrics monthly:
 - **Brand:** Influencer mentions, user-generated content volume, event attendance
 
 ### Revenue Projections
-
-**Conservative Scenario:**
-- Months 1-3: $2-5k/mo
-- Months 4-6: $8-12k/mo
-- Months 7-12: $15-25k/mo
-
-**Optimistic Scenario (viral moments + successful drops):**
-- Months 1-3: $5-10k/mo
-- Months 4-6: $20-40k/mo
-- Months 7-12: $50-100k/mo
 
 ### Critical Dependencies & Risks
 
