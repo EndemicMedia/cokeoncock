@@ -25,16 +25,25 @@ export default function About() {
                     {/* Poetic Origin Story - The Bathroom Line Scene */}
                     <div className="space-y-6 text-lg md:text-xl text-gray-300 font-mono leading-relaxed">
                         <p>
-                            Berlin. 4 AM. The bathroom line at Berghain snakes like a confession booth.
+                            The bathroom line at Berghain snakes like a confession booth.
                         </p>
                         <p>
-                            Bass rattles the tiles. Someone's rolling. Someone's kissing. Someone's crying.
+                            Bass rattles in the distance.
                         </p>
                         <p>
-                            She leans in—eyes sharp, grin sharper.
+                            Someone's rolling.
+                        </p>
+                        <p>
+                            Someone's kissing.
+                        </p>
+                        <p>
+                            Someone's pissing into someone else's face.
+                        </p>
+                        <p className="mt-8">
+                            She leans in, eyes sharp. She commands:
                         </p>
                         <p className="text-hotpink italic">
-                            "You want a line?"
+                            "Lets do a line together"
                         </p>
                         <p>
                             You nod.
