@@ -1,7 +1,15 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import ProductGrid from '../components/products/ProductGrid'
+import { updateMetaTags } from '../utils/seo'
 
 export default function Shop() {
+  useEffect(() => {
+    updateMetaTags({
+      title: 'Shop - Coke on Cock',
+      description: 'Browse the full collection of night-ready signals. Streetwear designed to start things.'
+    })
+  }, [])
   return (
     <div className="min-h-screen">
       {/* Shop Header */}
@@ -13,7 +21,7 @@ export default function Shop() {
           className="max-w-3xl mx-auto text-center mb-12"
         >
           <h1 className="text-5xl md:text-7xl font-bold font-display mb-4">
-            THE <span className="text-matrix">CREW</span> STORE
+            THE <span className="text-matrix">SIGNAL</span> STORE
           </h1>
           <p className="text-xl text-gray-400 font-mono">
             Browse the full collection of night-ready signals.

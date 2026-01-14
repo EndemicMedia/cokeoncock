@@ -38,17 +38,20 @@ A neo-brutalist landing page for a nightlife-first streetwear label. Built with 
 
 ## 🗺️ Product & Brand Roadmap
 
-### Phase 1: Revenue Foundation (Weeks 1-4)
+### Phase 1: Revenue Foundation ✅ COMPLETE
 **Goal:** Fix critical conversion blockers and build operational foundation
-- [ ] Install Google Analytics 4 + Meta Pixel for conversion tracking
-- [ ] Add trust badges (secure checkout, 30-day returns, worldwide shipping)
-- [ ] Create and display clear shipping/returns policy
-- [ ] Add product size guide to reduce returns
-- [ ] Implement email capture widget (10% off + early access offer)
-- [ ] Set up Printful or similar print-on-demand fulfillment
+- [x] Expand product line: women's fits (cropped tee, fitted tank, baby tee)
+- [x] Add founder/origin story page to build authenticity
+- [x] Add trust badges (secure checkout, 30-day returns, worldwide shipping)
+- [x] Create and display clear shipping/returns policy
+- [x] Add product size guide to reduce returns
+- [x] Implement email capture widget (10% off + early access offer)
+- [x] Feature user-generated content on site (Instagram feed widget - **deferred to Phase 2**)
 
 ### Phase 2: Growth Engine (Weeks 5-12)
 **Goal:** Build owned audience, establish FOMO, create community
+- [ ] Set up Printful or similar print-on-demand fulfillment
+- [ ] Install Google Analytics 4 + Meta Pixel for conversion tracking
 - [ ] Launch referral program ("Bring a Friend: Give 10%, Get $10")
 - [ ] Execute micro-influencer seeding campaign (20 nightlife influencers, 10-50k followers)
 - [ ] Launch first limited edition drop (Drop 01: 3-5 designs, 50-100 units each)
@@ -57,16 +60,13 @@ A neo-brutalist landing page for a nightlife-first streetwear label. Built with 
 - [ ] Establish content calendar (3x/week Instagram: product, lifestyle, meme)
 - [ ] Launch TikTok strategy with vertical content
 - [ ] Create product bundles ("Crew Starter Pack", "Weekend Heat") to increase AOV
-- [ ] Add founder/origin story page to build authenticity
 - [ ] Start "Scene Report" blog (weekly: party review + city spotlight + interview)
 
 ### Phase 3: Brand Depth (Weeks 13-24)
 **Goal:** Own the nightlife streetwear category globally
 - [ ] Shoot professional lookbook (10-15 styled looks in nightlife settings)
-- [ ] Expand product line: women's fits (cropped tee, fitted tank, baby tee)
 - [ ] Add bottoms to collection (track pants, shorts) for complete outfit capability
 - [ ] Create visual lookbook: "How to wear Coke on Cock" styled guides
-- [ ] Feature user-generated content on site (#CokeonCock hashtag + Instagram feed widget)
 - [ ] Develop city strategy (Berlin, NYC, LA, London, Amsterdam): local events and partnerships
 - [ ] Partner with 3-5 actual nightlife venues/DJs for ongoing brand presence
 - [ ] Create membership/VIP program (early access to drops, exclusive events)

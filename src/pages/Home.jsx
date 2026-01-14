@@ -1,9 +1,11 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { HiArrowRight } from 'react-icons/hi2'
 import Hero from '../components/Hero'
 import { products } from '../data/products'
+import { TrustBadges } from '../components/common/TrustBadge'
+import { updateMetaTags } from '../utils/seo'
 
 // Lazy load heavy components for better performance
 const ProductHero = lazy(() => import('../components/products/ProductHero'))
@@ -20,6 +22,9 @@ const SectionLoader = () => (
 )
 
 export default function Home() {
+  useEffect(() => {
+    updateMetaTags() // Reset to defaults which is the home page config
+  }, [])
   // Featured products for hero sections
   const featuredProducts = [
     { product: products.find(p => p.id === 2), accentColor: 'matrix' },     // Collective Heat Hoodie
@@ -102,6 +107,19 @@ export default function Home() {
           ))}
         </section>
       </Suspense>
+
+      {/* Trust Badges Section */}
+      <section className="container mx-auto px-4 py-12 md:py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl mx-auto"
+        >
+          <TrustBadges />
+        </motion.div>
+      </section>
 
       {/* Shop CTA Section */}
       <section className="container mx-auto px-4 py-12 md:py-24">
