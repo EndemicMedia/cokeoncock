@@ -1,5 +1,6 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import { ModalProvider } from './contexts/ModalContext'
+import ScrollToTop from './components/layout/ScrollToTop'
 import Layout from './components/layout/Layout'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
@@ -13,6 +14,7 @@ function App() {
   return (
     <ModalProvider>
       <Router>
+        <ScrollToTop />
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
